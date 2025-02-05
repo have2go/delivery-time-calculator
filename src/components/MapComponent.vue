@@ -9,6 +9,9 @@ import { onMounted, watch } from 'vue'
 import L from 'leaflet'
 import 'leaflet-draw'
 import { useRoutesStore } from '../stores/routes'
+import markerIconUrl from '../../node_modules/leaflet/dist/images/marker-icon.png'
+import markerIconRetinaUrl from '../../node_modules/leaflet/dist/images/marker-icon-2x.png'
+import markerShadowUrl from '../../node_modules/leaflet/dist/images/marker-shadow.png'
 
 const routesStore = useRoutesStore()
 
@@ -66,6 +69,11 @@ onMounted(() => {
 
     drawnItems.addLayer(layer)
   })
+
+  L.Icon.Default.prototype.options.iconUrl = markerIconUrl
+  L.Icon.Default.prototype.options.iconRetinaUrl = markerIconRetinaUrl
+  L.Icon.Default.prototype.options.shadowUrl = markerShadowUrl
+  L.Icon.Default.imagePath = ''
 
   drawRoutes()
 })
