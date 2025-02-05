@@ -192,7 +192,6 @@ watch(
 <style scoped>
 .map-container {
   width: 100%;
-  height: 600px;
-  margin-top: 20px;
+  height: calc(100vh - 50px);
 }
 </style>

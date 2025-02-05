@@ -12,7 +12,8 @@
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build",
-    "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=main --verbose",
+    "deploy": "gh-pages -d dist/spa",
+    "predeploy": "npm run build",
     "postinstall": "quasar prepare"
   },
   "dependencies": {
