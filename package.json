@@ -16,7 +16,7 @@
     "postinstall": "quasar prepare"
   },
   "dependencies": {
-    "@quasar/app": "^3.3.3",
+    "@quasar/app-vite": "^3.3.3",
     "@quasar/extras": "^1.16.4",
     "@turf/turf": "^7.2.0",
     "leaflet": "^1.9.4",
