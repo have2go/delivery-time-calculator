@@ -13,7 +13,6 @@
     "dev": "quasar dev",
     "build": "quasar build",
     "deploy": "push-dir --dir=dist/spa --remote=gh-pages --branch=main --verbose",
-    "predeploy": "npm run build",
     "postinstall": "quasar prepare"
   },
   "dependencies": {
